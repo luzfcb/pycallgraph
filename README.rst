@@ -66,6 +66,16 @@ A simple use of the API is::
     with PyCallGraph(output=GraphvizOutput()):
         code_to_profile()
 
+or::
+
+    import pycallgraph
+    from pycallgraph.output import GraphvizOutput
+
+
+    @pycallgraph.decorators.trace(output=GraphvizOutput())
+    def code_to_profile()
+        foo_bar_code()
+
 Documentation
 =============
 
